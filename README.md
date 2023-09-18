@@ -4,7 +4,7 @@ A flutter practice project to understand provider with Two page with counter
 
 ## Key Changes
 
-#### - changes on `main.dart`:
+### 1. changes on `main.dart`:
 
 ```dart
 class MyApp extends StatelessWidget {
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
 }
 ```
 
-#### - inside `provider_class.dart`:
+### 2. inside `provider_class.dart`:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -48,7 +48,7 @@ class IncrementProvider extends ChangeNotifier {
 }
 ```
 
-#### - on the page where we will use the provider method suppose : `home.dart`
+### 3. on the page where we will use the provider method suppose : `home.dart`
 
 - Use consumer as the wrapper over the parent of the widget we wanna use the provider properties.
 
