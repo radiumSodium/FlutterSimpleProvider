@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class RanaProvider extends ChangeNotifier {
+class IncrementProvider extends ChangeNotifier {
   int number = 0;
   void Increment() {
     number++;

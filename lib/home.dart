@@ -1,4 +1,4 @@
-import 'package:flavours_example/provider.dart';
+import 'package:flavours_example/provider_class.dart';
 import 'package:flavours_example/secondPage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,8 +13,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<RanaProvider>(
-      builder: (context, ranaProvider, child) => Scaffold(
+    return Consumer<IncrementProvider>(
+      builder: (context, incrementProvider, child) => Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: Text('Provider Practice'),
@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
                 'First Page',
               ),
               Text(
-                '${ranaProvider.number.toString()}',
+                '${incrementProvider.number.toString()}',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               SizedBox(
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            ranaProvider.Increment();
+            incrementProvider.Increment();
           },
           tooltip: 'Increment',
           child: const Icon(Icons.add),
